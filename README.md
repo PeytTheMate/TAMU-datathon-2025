@@ -1,7 +1,7 @@
 # Case Closed Hackathon Agent
 
 ## Overview
-This repository implements a competitive agent for the **Case Closed** Tron-style hackathon hosted at TAMU Datathon 2025. The service exposes a lightweight Flask API that mirrors the tournament harness, while the core agent logic evaluates safe moves on the 18×20 toroidal arena by measuring accessible space and prioritising survival.
+This repository implements a competitive agent for the TAMU 2025 Dathathon Case Closed Competition. The service exposes a lightweight Flask API that mirrors the tournament harness, while the core agent logic evaluates safe moves on the 18×20 toroidal arena by measuring accessible space and prioritising survival.
 
 Use this README as the canonical guide for installing dependencies, running the HTTP service, exercising the agent locally, and preparing the Docker image for submission.
 
@@ -15,14 +15,14 @@ Use this README as the canonical guide for installing dependencies, running the 
 
 ## Prerequisites
 - Python 3.11+
-- pip (or uv/poetry as preferred, but pip examples are shown below)
+- pip (or uv/poetry as preferred, but pip examples are shown below), though uv is goated.
 - Docker (for the final submission image)
 
 ## Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
-This installs only Flask and NetworkX, keeping the runtime footprint small for the CPU-only infrastructure.
+This installs only Flask and NetworkX, keeping the runtime footprint.
 
 ## Run the agent service
 ```bash
@@ -156,11 +156,4 @@ docker run -p 5008:5008 case-closed-agent
 ```
 Then repeat the manual or automated scrimmage steps against `localhost:5008` to confirm parity with the bare-metal run.
 
-## Submission checklist
-- [ ] All dependencies captured in `requirements.txt`.
-- [ ] `python agent.py` runs without errors and responds on port 5008.
-- [ ] Automated scrimmage harness shows competitive performance.
-- [ ] Docker image builds successfully (<5 GB, CPU-only).
-- [ ] Repository pushed to GitHub and submitted on Devpost before the deadline.
-
-With this workflow you can iterate on strategies, validate behaviour end-to-end, and ship a compliant agent ready for the Case Closed tournament bracket.
+With this workflow you should be able to iterate on strategies.
