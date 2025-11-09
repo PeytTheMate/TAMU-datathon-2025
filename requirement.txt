@@ -1,0 +1,8 @@
+torch==2.3.0+cpu
+torchvision==0.18.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+stable-baselines3==2.3.0
+networkx==3.3
+flask==3.0.3
+numpy==1.26.4
+gymnasium==0.29.1
